@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evexia: a wellness tracker.</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="a-little-cover-up"></div>
+    <header>
+        <h1>evexia: a wellness tracker</h1>
+        <nav>
+            <ul>
+                <li><a href="website.html">dashboard</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="journal.html">journal</a></li>
+                <li><a href="takesurvey.html">take survey</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="dashboard">
+            <!-- Dashboard content goes here -->
+            <style>
+                /* Style for the widget container */
+                .widget-container {
+                    position: fixed;
+                    bottom: 15px;
+                    left: 20px;
+                    width: 480px;
+                    height: 480px;
+                    background-color: rgb(240, 223, 254);
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1;
+                }
+
+            </style>
+        </head>
+        <body>
+
+    <!-- Widget container with an image inside -->
+    <div id="svg">
+        <svg viewBox="80 75 650 650">
+            <text x="455" y="120" font-family="Helvetica" font-size="35" fill="black">In</text>
+            <text x="450" y="710" font-family="Helvetica" font-size="35" fill="black">Ph</text>
+            <text x="670"y="550" font-family="Helvetica" font-size="35" fill="black">Em</text>
+            <text x="670"y="275" font-family="Helvetica" font-size="35" fill="black">So</text>
+            <text x="95"y="550" font-family="Helvetica" font-size="35" fill="black">Fi</text>
+            <text x="85"y="275" font-family="Helvetica" font-size="35" fill="black">En</text>
+
+            <g transform="matrix(1,0,0,1,0,0)"></g>
+            <path d="M400 99L661 249L661 551L400 701L139 551L139 249L400 99Z" stroke-width="8" stroke="#000000" fill="none" opacity="1" transform="rotate(0, 400, 400)"></path>
+            <path d="M400 193L582 298L582 509L400 614L218 509L218 298L400 193Z" stroke-width="8" stroke="#000000" fill="none" opacity="1" transform="rotate(0, 400, 400)"></path>
+            <path d="M400 287L503 347L503 466L400 526L297 466L297 347L400 287Z" stroke-width="8" stroke="#000000" fill="none" opacity="1" transform="rotate(0, 400, 400)"></path>
+            <path d="M400 382L425 396L425 424L400 438L375 424L375 396L400 382Z" stroke-width="7" stroke="#000000" fill="none" opacity="1" transform="rotate(0, 400, 400)"></path>
+            <path fill="rgb(238,211,169)" d="alhfeljsd" stroke-width="8" stroke="red" opacity=".7" transform="rotate(0, 400, 400)"></path>
+            <path fill="none" d="alhfeljsd" stroke-width="8" stroke="rgb(238,211,169)" opacity="1" transform="rotate(0, 400, 400)"></path>
+        </svg>
+    </div>
+
+    <!-- <div class="widget-container">
+        <a href="detailview.html"></a>
+    </div> -->
+
+    <!-- daily message -->
+    <div class="daily-message-container" id="dailyMessageContainer"></div>
+
+    <!-- to-do list -->
+    <div class="todo-widget-container">
+        <h2>To-Do List</h2>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Enter a new task...">
+            <button type="submit">Add</button>
+        </form>
+        <div id="todo-list"></div>
+    </div>
+
+    <!-- goals! -->
+    <div class="goals-container">
+        <h2>Goals</h2>
+
+        <div class="chart">
+            <div class="goal-category">
+                <div class="goal-category-label">Physical</div>
+                <textarea class="goal-category-input" placeholder="physical goals here!"></textarea>
+            </div>
+
+            <div class="goal-category">
+                <div class="goal-category-label">Social</div>
+                <textarea class="goal-category-input" placeholder="social goals here!"></textarea>
+            </div>
+
+            <div class="goal-category">
+                <div class="goal-category-label">Emotional</div>
+                <textarea class="goal-category-input" placeholder="emotional goals here!"></textarea>
+            </div>
+
+            <div class="goal-category">
+                <div class="goal-category-label">Intellectual</div>
+                <textarea class="goal-category-input" placeholder="intellectual goals here!"></textarea>
+            </div>
+
+            <div class="goal-category">
+                <div class="goal-category-label">Environmental</div>
+                <textarea class="goal-category-input" placeholder="environmental goals here!"></textarea>
+            </div>
+
+            <div class="goal-category">
+                <div class="goal-category-label">Financial</div>
+                <textarea class="goal-category-input" placeholder="financial goals here!"></textarea>
+            </div>
+        </div>
+
+        <textarea class="user-input" placeholder="what are your most important, overall goals?"></textarea>
+    </div>
+
+    <!-- journal widget ---------------------------------------------------------------->
+    <div id="journal-widget">
+        <div class="journal-header">
+            <h1>Journal</h1>
+        </div>
+        <div class="new-entry">
+            <input type="text" id="entry-title" placeholder="Title">
+            <textarea id="entry-text" placeholder="Write your entry here..."></textarea>
+            <button type="type" id="add-entry-btn">submit entry</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to add a new to-do item
+        function addTodoItem(task) {
+            const todoList = document.getElementById('todo-list');
+            const todoItem = document.createElement('div');
+            todoItem.classList.add('todo-item');
+
+            // Create checkbox
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.addEventListener('change', function() {
+                if (this.checked) {
+                    todoItem.remove(); // Remove todo item when checkbox is checked
+                }
+            });
+
+            // Create task text
+            const taskText = document.createElement('span');
+            taskText.textContent = task;
+
+            // Append checkbox and task text to todo item
+            todoItem.appendChild(checkbox);
+            todoItem.appendChild(taskText);
+
+            // Append todo item to todo list
+            todoList.appendChild(todoItem);
+        }
+
+        // Form submit event listener
+        document.getElementById('todo-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const inputField = document.getElementById('todo-input');
+            const task = inputField.value.trim(); // Trim whitespace from input value
+
+            if (task !== '') {
+                addTodoItem(task); // Add new todo item
+                inputField.value = ''; // Clear input field after adding task
+            }
+        });
+        
+        // daily message!
+        // Get the current date
+        var currentDate = new Date();
+
+        // Array of messages for each day of the week
+        var dayMessages = [
+            "happy monday! if you can, go on a brisk 10-minute walk today. treat yourself to some movement outdoors!",
+            "take five minutes out of your day today to meditate. meditating relaxes your mind and helps with stress. have a lovely tuesday!",
+            "hello, wednesday! have a conversation with a friend or family member and try to take it as an opportunity to get to know them better and strengthen your relationship.",
+            "it’s thursday! write it down or just think about: what are three things you are thankful for?",
+            "happy friday! cozy up and spend 20 minutes reading today.",
+            "it’s saturday! now that the week is coming to a close, reflect on what you have accomplished this week. even small successes deserve to be celebrated!",
+            "happy sunday! have a fabulous day, that is all. do something nice for yourself!",
+        ];
+
+        // Check if it's the last Sunday of the month
+        var lastSunday = (currentDate.getDay() === 0) && (currentDate.getDate() > (new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate() - 7));
+
+        // Set the message based on the day of the week
+        var message = lastSunday ? "it's been a month... time to update your health hex by filling out the survey again! click the take survey button in the navigation above..." : dayMessages[currentDate.getDay()];
+
+        // Display the message in the container
+        document.getElementById('dailyMessageContainer').textContent = message;
+
+        // health hex
+
+        var physical = localStorage.getItem('Globalphysical');
+        var emotional = localStorage.getItem('Globalemotional');
+        var social = localStorage.getItem('Globalsocial');
+        var intellectual = localStorage.getItem('Globalintellectual');
+        var environmental = localStorage.getItem('Globalenvironmental');
+        var financial = localStorage.getItem('Globalfinancial');
+
+        var personalstats = "M";
+        
+        //intelectual
+        var roundedValue = Math.round(intellectual / 16 * 4);
+        if (roundedValue >= 3) {
+        personalstats += "400 99";
+        } else if (roundedValue === 2) {
+        personalstats += "400 193";
+        } else if (roundedValue === 1) {
+        personalstats += "400 287";
+        } else {
+        personalstats += "400 382";
+        }
+
+
+        //social
+        var roundedValue = Math.round(social / 26 * 4);
+
+
+        // Determine the coordinates based on the rounded value
+        if (roundedValue >= 3) {
+        personalstats += "L661 249";
+        } else if (roundedValue === 2) {
+        personalstats += "L582 298";
+        } else if (roundedValue === 1) {
+        personalstats += "L503 347";
+        } else {
+        personalstats += "L425 396";
+        }
+
+
+        //emotional
+        var roundedValue = Math.round(emotional / 41 * 4);
+
+
+        // Determine the command based on the rounded value
+        if (roundedValue >= 3) {
+        personalstats += "L661 551";
+        } else if (roundedValue === 2) {
+        personalstats += "L582 509";
+        } else if (roundedValue === 1) {
+        personalstats += "L503 466";
+        } else {
+        personalstats += "L425 424";
+        }
+
+
+        var roundedValue = Math.round(physical / 29 * 4);
+        // physical
+        if (roundedValue >= 3) {
+            personalstats += "L400 701";
+        } else if (roundedValue === 2) {
+            personalstats += "L400 614";
+        } else if (roundedValue === 1) {
+            personalstats += "L400 526";
+        } else {
+            personalstats += "L400 438";
+        }
+
+
+        //finantial
+        var roundedValue = Math.round(financial / 5 * 4);
+
+
+        // Determine the coordinates based on the rounded value
+        if (roundedValue >= 3) {
+        personalstats += "L139 551";
+        } else if (roundedValue === 2) {
+        personalstats += "L218 509";
+        } else if (roundedValue === 1) {
+        personalstats += "L297 466";
+        } else {
+        personalstats += "L375 424";
+        }
+
+
+        //environmental
+        var roundedValue = Math.round(environmental / 5 * 4);
+
+
+        // Determine the command based on the rounded value
+        if (roundedValue >= 3) {
+        personalstats += "L139 249";
+        } else if (roundedValue === 2) {
+        personalstats += "L218 298";
+        } else if (roundedValue === 1) {
+        personalstats += "L297 347";
+        } else {
+        personalstats += "L375 396";
+        }
+        //return to intelectual
+        var roundedValue = Math.round(intellectual / 16 * 4);
+        if (roundedValue >= 3) {
+        personalstats += "L400 99";
+        } else if (roundedValue === 2) {
+        personalstats += "L400 193";
+        } else if (roundedValue === 1) {
+        personalstats += "L400 287";
+        } else {
+        personalstats += "L400 382";
+        }
+
+
+        personalstats += "Z";
+        
+        var pathElements = document.querySelectorAll('svg path:nth-last-of-type(-n+2)');
+
+
+        // Loop through the selected path elements and set the 'd' attribute to the personalstats string
+        pathElements.forEach(function(pathElement) {
+        pathElement.setAttribute('d', personalstats);
+        });
+
+        document.getElementById('add-entry-btn').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            // Get the values from the form inputs
+            var title = document.getElementById('entry-title').value;
+            var description = document.getElementById('entry-text').value;
+
+            // store in local storage so that when journal.html is opened, it is automatically there
+            saveToLocalStorage(title, description);
+            window.location.href = 'journal.html';
+        });
+
+        // Function to save title and description to localStorage
+        function saveToLocalStorage(title, description) {
+            // Convert title and description to JSON string and store in localStorage
+            loje[title] = description;
+            localStorage.setItem('globalloje', JSON.stringify(loje));
+        }
+
+    </script>
+</body>
+<body>
+    </main>
+</body>
+</html>

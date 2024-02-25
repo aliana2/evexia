@@ -1,0 +1,255 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20;
+    margin-right:20px;
+    margin-left:20px;
+}
+
+.a-little-cover-up {
+    position: fixed;
+    width: 96.8vw;
+    height: 100px;
+    background-color: #d8a9e3;
+}
+
+header {
+    position: fixed;
+    width: 94vw;
+    background-color: #d8a9e3;
+    color: black;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
+    margin-top: 0;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius:20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.todo-widget-container {
+    position: fixed;
+    bottom: 15px;
+    left: 515px;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(240, 223, 254);
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    overflow: auto;
+}
+
+.todo-item {
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-left:0px;
+    margin-right:10px;
+    overflow-wrap: break-word;
+    text-align: left;
+}
+
+.todo-item input[type="checkbox"] {
+    margin: 5px;
+}
+
+.daily-message-container {
+    position: fixed;
+    top: 165px;
+    left: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: rgb(186, 128, 215);
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#t {
+    width: 270px;
+    background-color: white;
+    border: 1px solid #000000;
+}
+
+#todo-input {
+    width: 345px;
+    background-color: white;
+    border: 1px solid #000000;
+}
+
+.goals-container {
+    position: fixed;
+    width: 875px;
+    margin-left: 475px;
+    margin-top: 205px;
+    margin-bottom:500px;
+    height:200px;
+    padding: 15px;
+    background-color: rgb(240, 223, 254);
+    color: black;
+    border-radius: 20px;
+}
+
+.chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+.goal-category {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.goal-category-label {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.goal-category-input {
+    width: 100%;
+    height: 80px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.user-input {
+    width: 99%;
+    height:35px;
+    text-align: left;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+h2 {
+    margin-top: 5px;
+}
+
+.line {
+    border: none;
+    width: 40%;
+    border-top: 1px solid rgb(240, 223, 254);
+    margin: 5px 0;
+    padding-left:500px;
+    padding-right:500px;
+}
+
+#svg {
+    height:20%;
+    position: fixed;
+    bottom: 15px;
+    left: 20px;
+    width: 480px;
+    height: 480px;
+    z-index: 2;
+}
+
+#journal-widget {
+    width: 460px;
+    height: 240px;
+    background-color: rgb(238, 211, 169); /* Purple color */
+    padding: 15px;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 15px; /* Adjusted position */
+    right: 15px;
+    border-radius: 20px;
+}
+
+.journal-header {
+    text-align: center;
+    margin-top: -10px;
+
+}
+
+.journal-header h1 {
+    color: black;
+}
+
+.new-entry input,
+.new-entry textarea {
+    width: calc(100%);
+    margin-bottom: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.new-entry textarea {
+    height: 50px;
+    resize: none;
+}
+
+#add-entry-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-entry-btn:hover {
+    background-color: #f0f0f0;
+}
+
+#journalForm {
+    float:left;
+    margin-top: 15px;
+    width:650px;
+}
+
+#entrytitle {
+    width:650px;
+}
+
+#description {
+    width:650px;
+    height:200px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#journalEntries {
+    float:right;
+    margin-top:15px;
+    margin-right:15px;
+    /* margin-bottom:300px; */
+    width:650px;
+    height:400px;
+    /* align-content: right;
+    align-items: right;
+    align-self: right; */
+}

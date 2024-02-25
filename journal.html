@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evexia: wellness tracker - take survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="a-little-cover-up"></div>
+    <header>
+        <h1>evexia: wellness tracker - journal</h1>
+        <nav>
+            <ul>
+                <li><a href="website.html">dashboard</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="journal.html">journal</a></li>
+                <li><a href="takesurvey.html">take survey</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="journal">
+            <style>
+                .header-header {
+                    padding-top:150px;
+                    padding-right:520px;
+                    padding-left:520px;
+                    padding-bottom:0px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class = "header-header">
+            </div>
+            
+            <form id="journalForm">
+                <input id="entrytitle" name="title" placeholder="journal entry title"><br><br>
+                
+                <textarea id="description" name="description" placeholder="enter your journal entry here! what was unique about this experience? what do you want future you to remember about today? or, perhaps just say whatever you need to say. it's up to you! now, write away..."></textarea><br><br>
+        
+                <button type="submit">Submit</button>
+            </form>
+
+            <div id="journalEntries"></div>
+        <body>
+            <script>
+                if (typeof loje == 'undefined') {
+                    var loje = {};
+                    localStorage.setItem('globalloje', JSON.stringify(loje));
+                }
+                document.getElementById('journalForm').addEventListener('submit', function(event) {
+                    event.preventDefault(); // Prevent the form from submitting
+
+                    // Get the values from the form inputs
+                    var title = document.getElementById('entrytitle').value;
+                    var description = document.getElementById('description').value;
+
+                    // Do something with the title and description
+                    
+                    var entryDiv = document.createElement('div');
+
+                    // Set the inner HTML of the entry div with the title and description
+                    entryDiv.innerHTML = '<h2>' + title + '</h2><p>' + description + '</p>';
+
+                    // Append the entry div to the container for journal entries
+                    document.getElementById('journalEntries').appendChild(entryDiv);
+                    saveToLocalStorage(title, description);
+
+                    // clear the form fields after submission
+                    document.getElementById('entrytitle').value = '';
+                    document.getElementById('description').value = '';
+                });
+
+                // Function to save title and description to localStorage
+                function saveToLocalStorage(title, description) {
+                    // Convert title and description to JSON string and store in localStorage
+                    loje[title] = description;
+                    localStorage.setItem('globalloje', JSON.stringify(loje));
+                }
+
+                // Load title and description from localStorage
+                window.addEventListener('DOMContentLoaded', function() {
+                    if (typeof loje != 'undefined') {
+                        var storedEntry = localStorage.getItem('globalloje');
+                        for (var i = 0; i < storedEntry.length; i++) {
+                                var entry = JSON.parse(storedEntry[Object.keys(storedEntry)[i]]);//This code retrieves the value at the position i
+                                // Display the stored entry
+                                var entryDiv = document.createElement('div');
+                                entryDiv.innerHTML = '<h2>' + entry.title + '</h2><p>' + entry.description + '</p>';
+                                document.getElementById('journalEntries').appendChild(entryDiv);
+                        }
+                    }
+                });
+            </script>
+        
+
+    </main>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evexia: wellness tracker - take survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="a-little-cover-up"></div>
+    <header>
+        <h1>evexia: wellness tracker - take survey</h1>
+        <nav>
+            <ul>
+                <li><a href="website.html">dashboard</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="journal.html">journal</a></li>
+                <li><a href="takesurvey.html">take survey</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="takesurvey">
+            <style>
+                .header-header {
+                    padding-top:150px;
+                    padding-right:520px;
+                    padding-left:520px;
+                }
+                .first-question-container {
+                    width: 300px;
+                    margin: 0 auto;
+                    padding: 15px;
+                    padding-bottom: 0px;
+                    padding-left: 15px;
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 0px;
+                    border: 0.1px solid black
+                }
+                .question-container {
+                    width: 300px;
+                    margin: 0 auto;
+                    padding: 15px;
+                    padding-bottom: 0px;
+                    padding-left: 15px;
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    margin-bottom: 0px;
+                    margin-top: 10px;
+                    border: 0.1px solid black
+                }
+                
+                .answer-container {
+                    width: 270px;
+                    margin: 10 auto;
+                    padding: 30px;
+                    background-color: rgb(238, 211, 169);
+                    border-radius: 10px;
+                    margin-bottom: 0px;
+                    margin-top: 10px;
+                    margin-left:-15px;
+                }
+        
+                button {
+                    margin-top: 10px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class = "header-header">
+                <p>fill out the short 20 question survey to get your new monthly health hex!</p>
+            </div>
+            <hr class="line">
+            <form id="surveyForm">
+                <!-- Question 1 -->
+                <div class="first-question-container">
+                    <p>How many hours of sleep have you gotten per night in past week?</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer1" placeholder="Enter your answer...">
+                    </div>
+                </div>
+        
+                <!-- Question 2 -->
+                <div class="question-container">
+                    <p>How many hours of exercise do you get per day?</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer2" placeholder="Enter your answer...">
+                    </div>
+                </div>
+        
+                <!-- ... Repeat for the remaining questions ... -->
+                
+                <div class="question-container">
+                    <p>How many hours do you spend outside in nature per day?</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer3" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>How would you rate your typical diet on a scale from 1 to 10? Please consider protein, vegetables, fruit, dairy, and grain intake.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer4" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>How many times have you gotten sick in past 6 months?</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer5" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>How many hours of screen time on your phone do you have per day?</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer6" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>Are you involved in any risky behaviors, such as alcohol, tobacco, or drug use? Type 0 for no, 1 for yes.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer7" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>How many close friends do you currently have?</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer8" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>Do you feel that you can tell your friends anything and you are supported by your friends or community? Type 0 for no, 1 for yes.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer9" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>How comfortable are you around your family? Please rate this on a scale of 1 to 10.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer10" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>Is there at least one person you trust to talk to about anything? Type 0 for no, 1 for yes.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer11" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>Have you felt depressed in the past week? Type 0 for no, 1 for yes.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer12" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>How many days have you felt happy in the past week?</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer13" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>How happy have you been in the past week? Please rate this on a scale from 1 to 10.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer14" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>Is there a thing or place you can go to be happy? Type 0 for no, 1 for yes.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer15" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>How many hours, on average, do you spend learning every day?</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer16" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>Have you learned or practiced any skills in the past 3 months? Type 0 for no, 1 for yes.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer17" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>Have you read any books recently? Type 0 for no, 1 for yes.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer18" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>Do you pay attention to your impact on the planet? Please rate this on a scale of 1 to 10.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer19" placeholder="Enter your answer...">
+                    </div>
+                </div>
+                <div class="question-container">
+                    <p>How responsible do you feel your spending habits are? Please rate this on a scale of 1 to 10.</p>
+                    <div class="answer-container">
+                        <input type="text" id = "t" name="answer20" placeholder="Enter your answer...">
+                    </div>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        
+            <script>
+                // Event listener for the survey form submission
+                document.getElementById('surveyForm').addEventListener('submit', function (event) {
+                    event.preventDefault(); // Prevent the form from submitting in the traditional way
+        
+                    // Array to store user answers
+                    var userAnswers = [];
+        
+                    // Loop through each question and store the user's answer
+                    for (var i = 1; i <= 20; i++) {
+                        var answer = document.getElementsByName('answer' + i)[0].value;
+                        userAnswers.push(parseInt(answer));
+                    }
+        
+                    // Display or process userAnswers array as needed
+                    console.log(userAnswers);
+
+                    //EMMA PUT THIS CODE HERE
+                    var physical = 0.0;
+                    var social = 0.0;
+                    var emotional = 0.0;
+                    var intellectual = 0.0;
+                    var environmental = 0.0;
+                    var financial = 0.0;
+                    if (userAnswers[0] <= 9 && userAnswers[0] >= 7) {
+                        physical += 4;
+                    } else if (userAnswers[0] > 6 && userAnswers[0] < 7 || userAnswers[0] > 9 && userAnswers[0] < 10) {
+                        physical += 3;
+                    } else if (userAnswers[0] > 5 && userAnswers[0] < 6 || userAnswers[0] > 10 && userAnswers[0] < 12) {
+                        physical += 2;
+                    } else {
+                        physical += 1;
+                    }
+                    if (userAnswers[1] <= 45) {
+                    physical += (userAnswers[1]/45) * 5;
+                    emotional += (userAnswers[1]/45) * 2;
+                    } else {
+                        physical += 5-(((userAnswers[1]-45)/45)*5);
+                        emotional += 2-(((userAnswers[1]-45)/45)*2);
+                    }
+                    if (userAnswers[2] <= 45) {
+                    physical += (userAnswers[2]/45) * 3;
+                    emotional += (userAnswers[2]/45) * 3;
+                    } else {
+                        physical += 3-(((userAnswers[2]-45)/45)*3);
+                        emotional += 3-(((userAnswers[2]-45)/45)*3);
+                    }
+                    physical += (userAnswers[3]/10)*4;
+                    emotional += (userAnswers[3]/10)*2;
+
+                    if (userAnswers[4] >= 4) {
+                        physical += 1;
+                        emotional += (1/3);
+                        social += (1/3);
+                    } else if (userAnswers[4] >= 2 && userAnswers[4] <= 3) {
+                        physical += 2;
+                        emotional += (2/3);
+                        social += (2/3);
+                    } else {
+                        physical += 3;
+                        emotional += 1;
+                        social += 1;
+                    }
+                    if (userAnswers[5] <= 2) {
+                        physical += 4;
+                        emotional += (3);
+                        intellectual += (1);
+                    } else if (userAnswers[5] > 3) {
+                        physical += 3;
+                        emotional += (9/4);
+                        intellectual += (3/4);
+                    } else if (userAnswers[5] > 4) {
+                        physical += 2;
+                        emotional += (3/2);
+                        intellectual += (2/4);
+                    } else if (userAnswers[5] > 1) {
+                        physical += 1;
+                        emotional += (3/4);
+                        intellectual += (1/4);
+                    }
+                    physical += (userAnswers[6]/10) * 5;
+                    intellectual += (userAnswers[6]/10) * 2;
+
+                    social+=(userAnswers[7]/4.5)*4;
+                    emotional+=((userAnswers[7]/4.5)*4);
+                    if (userAnswers[8] === 1) {
+                        social+=5;
+                    emotional+=4;
+                    }
+                    social += (userAnswers[9]/10)*5
+                    emotional += (userAnswers[9]/10)*3
+                    if (userAnswers[10] === 1) {
+                        social+=4;
+                    }
+
+                    if (userAnswers[11]===0){
+                        emotional+=5;
+                    }
+                    if (userAnswers[12]>5){
+                        emotional+=5;
+                    }else if(userAnswers[12]>3){
+                        emotional+=3;
+                    }
+                    if (userAnswers[13]>7){
+                        emotional+=4;
+                    }else if(userAnswers[13]>6){
+                        emotional+=3;
+                    }else if(userAnswers[13]>3){
+                        emotional+=2;
+                    }else if(userAnswers[13]>1){
+                        emotional+=1;
+                    }
+                    if (userAnswers[14]===1){
+                        emotional+=5;
+                        intellectual+=1;
+                    }
+
+                    if (userAnswers[15] > 8) {
+                        intellectual += 5;
+                    } else if (userAnswers[15] > 5) {
+                        intellectual += 4;
+                    } else if (userAnswers[15] > 3) {
+                        intellectual += 3;
+                    }
+                    intellectual += (userAnswers[16]/10)*5;
+                    emotional += (userAnswers[16]/10)*2;
+                    if (userAnswers[17] === 1) {
+                        intellectual += 3;
+                    }
+
+                    environmental += (userAnswers[18]/10)*5;
+                    emotional += userAnswers[18]/10;
+                    financial+=(userAnswers[19]*(0.5));
+
+                    
+                    localStorage.setItem('Globalphysical', physical);
+                    localStorage.setItem('Globalsocial', social);
+                    localStorage.setItem('Globalemotional', emotional);
+                    localStorage.setItem('Globalintellectual', intellectual);
+                    localStorage.setItem('Globalenvironmental', environmental);
+                    localStorage.setItem('Globalfinancial', financial);
+                    //EMMA PUT THIS CODE HERE
+
+                    window.location.href = 'website.html';
+
+                });
+            </script>
+        
+</head>
+<body>
+    </main>
+</body>
+</html>
